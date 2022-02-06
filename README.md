@@ -1,6 +1,18 @@
+
+# Simple React Todo List.
+
+### A simple TodoList mini project from [The Modern React Bootcamp](https://www.udemy.com/course/modern-react-bootcamp/) using Functional components, custom hooks and Material UI.
+
+#### You can visit the project [here](https://nimajf.github.io/Simple-React-TodoList/).
+
+### Preview
+![image](https://user-images.githubusercontent.com/89944815/152698644-9e78c276-f3b2-440d-ab1b-ce0617693cd2.png)
+
+
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
