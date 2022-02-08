@@ -1,5 +1,6 @@
 import useTodoState from "./hooks/useTodoState";
 import TodoList from "./TodoList";
+import { TodosProvider } from "./contexts/todos.context";
 import { Paper } from "@mui/material";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -13,15 +14,6 @@ import { Grid } from "@mui/material";
 
 
 function TodoApp(){
-    const initialTodos = [{ id: 1, task: "Do homework", completed: false }]
-    const {todos, addTodo, removeTodo, toggleTodo, editTodo} = useTodoState(initialTodos)
-    // const initialTodos = [
-    //     { id: 1, task: "Clean house", completed: false },
-    //     { id: 2, task: "Buy milk", completed: true },
-    //     { id: 3, task: "Have dinner", completed: false }
-    // ]
-
-   
 
     return (
         <div>
@@ -46,8 +38,10 @@ function TodoApp(){
                 </Box>
                 <Grid container justifyContent="center" style={{marginTop: "5rem"}}>
                     <Grid item xs={11} md={8} lg={4}>
-                        <TodoForm addTodo={addTodo} />
-                        <TodoList todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} editTodo={editTodo} />
+                        <TodosProvider>
+                            <TodoForm />
+                            <TodoList />
+                        </TodosProvider>
                     </Grid>
                 </Grid>
             </Paper>
