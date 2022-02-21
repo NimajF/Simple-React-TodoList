@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { ListItem } from "@mui/material";
 import { ListItemText } from "@mui/material";
 import { Checkbox } from "@mui/material";
@@ -52,4 +52,4 @@ function Todo(props) {
   );
 }
 
-export default Todo;
+export default memo(Todo);
